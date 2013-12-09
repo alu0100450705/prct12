@@ -389,5 +389,9 @@ class MatrizDispersa < Matriz
    end
 end
 
-# mdis5=MatrizDispersa.new([[0,0,0],[1,2,3],[0,0,0]])
-# puts mdis5.minimo
+# mdis1= MatrizDispersa.new([[0,0,0],[1,2,3],[0,0,0]])
+# mdis2= MatrizDispersa.new([[0,0,0],[1,2,3],[0,0,0]])
+# # puts mdis1
+# # puts mdis2
+# mdis3=mdis1+mdis2
+# puts mdis3
