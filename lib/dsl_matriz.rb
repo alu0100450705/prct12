@@ -1,7 +1,14 @@
 class MatrixDSL 
 require "./matriz.rb" #definicion de la clase matriz
 
-
+  attr_accessor :op, :act, :modo
+  
+  def initialize(act,&block)
+    self.act=act
+    self.op=[]
+  end
+  
+  
 end
 
 ejemplo = MatrixDSL.new("Suma") do 
