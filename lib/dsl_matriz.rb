@@ -7,7 +7,28 @@ require "./matriz.rb" #definicion de la clase matriz
     self.act=act
     self.op=[]
   end
+  
+  def to_s
+  
+  if option == "console" 
+    console = act
     
+    op.each_with_index do |index|
+      console << op[index].to_s 
+      console << "aquiii\n"
+    end
+
+    console << " = " 
+    #console << (op[0]+op[1])
+    
+    console
+  elsif option == "file"
+		puts "pasar a un fichero"
+  end
+  
+  end  
+  
+  
   def option(mod)
     self.modo << mod
   end
