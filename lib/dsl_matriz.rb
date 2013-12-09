@@ -14,7 +14,6 @@ require "./matriz.rb" #definicion de la clase matriz
      if modo == "console" 
         console = name
         console << " = " 
-	puts self.op[0]
         console << "#{op[0]+op[1]}"
         console
      elsif modo == "file"
@@ -35,13 +34,13 @@ end
 ejemplo = MatrixDSL.new("Suma") do 
    option "console"
 #    puts self.name
-   mdis1= MatrizDispersa.new([[0,0,0],[1,2,3],[0,0,0]])
+   m1= Matriz.new([[1,2,3],[1,2,3],[4,5,6]])
 #    puts mdis1
-   mdis2= MatrizDispersa.new([[0,0,0],[3,2,1],[0,0,0]])
+   m2= Matriz.new([[9,8,7],[6,5,4],[3,2,1]])
    
-   operand(mdis1)  
+   operand(m1)  
 # #    puts self.op[0]
-   operand(mdis2) 
+   operand(m2) 
 end
 
 # mdis1= MatrizDispersa.new([[0,0,0],[1,2,3],[0,0,0]])
