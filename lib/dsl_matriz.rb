@@ -6,36 +6,32 @@ require "./matriz.rb" #definicion de la clase matriz
   def initialize(act,&block)
     self.act=act
     self.op=[]
+    self.modo = ""
+    instance_eval &block
   end
   
   def to_s
   
-  if option == "console" 
+  if modo == "console" 
     console = act
-    
-    op.each_with_index do |index|
-      console << op[index].to_s 
-      console << "aquiii\n"
-    end
+
 
     console << " = " 
-    #console << (op[0]+op[1])
+    console << (op[0]+op[1])
     
     console
-  elsif option == "file"
+  elsif modo == "file"
 		puts "pasar a un fichero"
   end
   
   end  
-  
   
   def option(mod)
     self.modo << mod
   end
   
   def operand(arrays)
-		puts "estamos aqui"
-    self.op << Matriz.vector(arrays)
+    self.op << Matriz.new(arrays)
   end    
   
 end
