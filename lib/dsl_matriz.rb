@@ -7,7 +7,15 @@ require "./matriz.rb" #definicion de la clase matriz
     self.act=act
     self.op=[]
   end
+    
+  def option(mod)
+    self.modo << mod
+  end
   
+  def operand(arrays)
+		puts "estamos aqui"
+    self.op << Matriz.vector(arrays)
+  end    
   
 end
 
