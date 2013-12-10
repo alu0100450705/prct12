@@ -15,7 +15,8 @@ require "./matriz.rb" #definicion de la clase matriz
   
   def to_s
      self.tipo_op = { "Suma" => op[0]+op[1], "Resta" => op[0]-op[1], "Multiplicacion" => op[0]*op[1]}
-     puts tipo_op["Suma"]
+#      puts "antes de imprimir suma"
+#      puts tipo_op[name].to_s     AQUI SI LO MUESTRA BIEN .No sabe poner un objeto Matriz en el fichero.
      if modo[0] == "console" 
         puts name
         puts tipo_op[name]
@@ -26,8 +27,8 @@ require "./matriz.rb" #definicion de la clase matriz
 	   i=0
            f= File.open('matriz.txt', 'w') 
            f.puts name
-	   f.puts tipo_op["#{name}"]
-#            f.puts "#{tipo_op["Suma"]}"  # a lo mejor hay q sobrecargar el to_s de hash para que lo muestre como una matriz.
+	   f.puts tipo_op[name]
+#            f.puts "#{tipo_op[name]}"  # AQUI PIERDE EL VALOR,a lo mejor hay q sobrecargar el to_s de hash para que lo muestre como una matriz.
 # 	      f2.close
        rescue 
           # code that deals with some exception
