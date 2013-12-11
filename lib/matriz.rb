@@ -389,13 +389,3 @@ class MatrizDispersa < Matriz
    end
 end
 
-# mdis1= MatrizDispersa.new([[0,0,0],[1,2,3],[0,0,0]])
-# mdis2= MatrizDispersa.new([[0,0,0],[1,2,3],[0,0,0]])
-# # puts mdis1
-# # puts mdis2
-# mdis3=mdis1+mdis2
-# puts mdis3
-# mde1= MatrizDensa.new([[1,2,3],[4,5,6],[7,8,0]])
-# mdis2= MatrizDispersa.new([[0,0,0],[1,2,3],[0,0,0]])
-# mde3=mde1+mdis2
-# puts mde3
