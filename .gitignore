@@ -16,3 +16,6 @@ test/version_tmp
 tmp
 *~
 *.*~
+
+# Gemnasium gem configuration file
+config/gemnasium.yml
