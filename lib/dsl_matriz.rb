@@ -19,8 +19,7 @@ require "./matriz.rb" #definicion de la clase matriz
         puts name
         puts op[0]
         puts op[1]
-        final = tipo_op[name]
-        puts final
+        puts tipo_op[name]
      else
 			 puts "Creando fichero"
 			 i=0
@@ -48,10 +47,10 @@ end
 
 ejemplo = MatrixDSL.new("Suma") do 
   option "console"
-  option "Densa"
+  option "Dispersa"
 
-  operand [[1,2,3],[4,5,6],[0,0,0]]  
-  operand [[0,0,0],[1,1,1],[1,2,3]]  
+  operand [[0,0,3],[0,5,6],[0,0,0]]  
+  operand [[0,0,0],[1,1,0],[0,0,3]]  
    
 
 end
