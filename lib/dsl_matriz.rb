@@ -13,19 +13,23 @@ require "./matriz.rb" #definicion de la clase matriz
   end
   
   def to_s
-     self.tipo_op = { "Suma" => op[0]+op[1], "Resta" => op[0]-op[1], "Multiplicacion" => op[0]*op[1]}
-
+		 
+	 resul = case name
+   when "Suma" then op[0]+op[1]
+   when "Resta" then op[0]-op[1]
+   when "Multiplicacion" then op[0]*op[1]
+   end
+		
      if modo[0] == "console" 
         puts name
-        puts op[0]
-        puts op[1]
-        puts tipo_op[name]
+        puts resul
      else
-			 puts "Creando fichero"
+			 puts "Creando fichero..."
 			 i=0
 			 f= File.open('matriz.txt', 'w') 
 			 f.puts name
-			 f.puts tipo_op[name]
+			 f.puts resul
+			 puts "fichero terminado"
 		end  
 	end
   
@@ -46,11 +50,11 @@ require "./matriz.rb" #definicion de la clase matriz
 end
 
 ejemplo = MatrixDSL.new("Suma") do 
-  option "console"
-  option "Dispersa"
+  option "fichero"
+  option "Diespersa"
 
-  operand [[0,0,3],[0,5,6],[0,0,0]]  
-  operand [[0,0,0],[1,1,0],[0,0,3]]  
+  operand [[0,0,0],[0,5,6],[0,0,0]]  
+  operand [[0,0,0],[1,1,1],[0,0,0]]  
    
 
 end
