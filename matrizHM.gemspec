@@ -19,10 +19,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "guard"
-  spec.add_development_dependency "guard-rspec"
-  spec.add_development_dependency "guard-bundler"
-  spec.add_development_dependency "rdoc"
+  spec.add_development_dependency "rake", "~> 10.1"
+  spec.add_development_dependency "rspec", "~> 2.14.1"
+  spec.add_development_dependency "guard", "~> 2.2.2"
+  spec.add_development_dependency "guard-rspec", "~> 4.0.4"
+  spec.add_development_dependency "guard-bundler", "~> 2.0.2"
+  spec.add_development_dependency "rdoc", "~> 4.0.1"
 end

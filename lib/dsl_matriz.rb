@@ -50,7 +50,7 @@ require "./matriz.rb" #definicion de la clase matriz
 end
 
 ejemplo = MatrixDSL.new("Suma") do 
-  option "fichero"
+  option "console"
   option "Diespersa"
 
   operand [[0,0,0],[0,5,6],[0,0,0]]  
