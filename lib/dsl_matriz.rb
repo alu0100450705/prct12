@@ -1,3 +1,13 @@
+# == Construcción de una gema.
+#  -> Diseñar y desarrollar un DSL interno para trabajar con matrices. 
+#
+# ===Clase MatrixDSL
+#   Es la clase que utiliza el DSL. Esta clase tiene los siguientes métodos:
+#      initialize: Inicialización de os atributos de la clase.
+#      to_s: método que depende del método elegido muestra por consola o escribe en un fichero el resultado de aplicar la operación dada como nombre.     
+#      operand(arrays): Almacenamos en un vector de operandos las matrices. Estas pueden ser densas o dispersas
+#
+#
 class MatrixDSL 
 require "./matriz.rb" #definicion de la clase matriz
 
